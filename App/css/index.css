@@ -1,0 +1,169 @@
+
+::-webkit-scrollbar {
+
+    display: none; 
+}
+
+::-moz-scrollbar {
+
+    display: none; 
+}
+
+
+@font-face{
+    font-family:Robobold;
+    src: url("../fonts/roboto/Roboto-Bold.woff") format('woff');
+}
+
+@font-face{
+    font-family:Robolight;
+    src: url("../fonts/roboto/Roboto-Light.woff") format('woff');
+}
+
+
+@font-face{
+    font-family:Robomed;
+    src: url("../fonts/roboto/Roboto-Medium.woff") format('woff');
+}
+
+
+body{
+    font-family: Robomed;
+}
+
+#firstFrame{
+    display: block;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    height: 100%;
+    width: 100%;
+    background-color: #01E65F;
+}
+
+#signUpFrame{
+    display: none;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    height: 100%;
+    width: 100%;
+    background-color:white;
+}
+
+#secondFrame{
+    display: none;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#alreadyPaidScreen{
+    display: none;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#payScreen{
+    display: none;
+    position: absolute;
+    left: 0%;
+    top:0%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#loaderDiv{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
+
+#sidenav-overlay{
+ background-color: white;
+ z-index: 0;   
+}
+
+.flex-div{
+   display: flex;
+}
+
+.flex-direction-row{
+    flex-direction: row;
+}
+
+.flex-justify-content-center{
+    justify-content: center;
+}
+
+.flex-justify-content-left{
+    justify-content: flex-start;
+}
+
+.flex-justify-content-right{
+    justify-content: flex-end;
+}
+
+.flex-align-items-center{
+    align-items: center;
+}
+
+.flex-align-items-end{
+    align-items: flex-end;
+}
+
+.flex-align-items-start{
+    align-items: flex-start;
+}
+
+
+
+.headline{
+    color: white;
+    font-family: Robobold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.headline2{
+    color: white;
+    font-family: Robobold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.subHeadline{
+    font-size: 3vh;
+    color: white;
+    font-family: Robolight;
+    margin-top: 0px;
+}
+
+.image_height{
+    height: 300px;
+}
+
+.image_height2{
+    height: 125px;
+}
+
+.image_height3{
+    height: 50px;
+}
+.cardStyle{
+    border-top:2px solid #01E65F;
+}
+

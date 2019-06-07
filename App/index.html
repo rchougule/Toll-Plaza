@@ -1,0 +1,512 @@
+<html>
+    <head>
+        <title>
+            Easy Toll Pay Application
+        </title>
+    </head>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mate_icon.css" >
+    
+    <body>
+
+        <div id="loaderDiv">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                    <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                    <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                    <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                    <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="signUpFrame">
+
+              <div class="row flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="margin:0px;">
+                    <div class="card-panel flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="background-color: #01E65F;margin:0px;">
+                        <div class="col s6">
+                                <img src="img/logo_image.png" class="image_height2">
+                        </div>
+                        <div class="col s6">
+                                <h3 class="headline"> TollFee </h3>  
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row"  style="margin:0px;">
+                <div class="col s12">
+                    <div class="row">
+
+                            <div class="input-field col s10 offset-s1"> 
+                                <i class="material-icons prefix">mail</i>
+                                <input id="input_emailID" type="text" class="validate">
+                                <label for="input_emailID">Email ID</label>
+                            </div>
+    
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">perm_identity</i>
+                                <input id="input_nameSigUp" type="text" class="validate">
+                                <label for="input_nameSigUp">Name</label>
+                            </div>
+
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">directions_car</i>
+                                <input id="input_VehicleNo" type="text" class="validate">
+                                <label for="input_VehicleNo">Vehicle Number</label>
+                            </div>
+
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">fingerprint</i>
+                                <input id="input_passwordSigUp" type="password" class="validate">
+                                <label for="input_passwordSigUp">Password</label>
+                            </div>
+                        </div>
+
+                </div>
+
+                
+                <div class="col s12">
+                    <center>
+                        <a  onclick="doSignUp()" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color:#01E65F;font-size:3vh;"> Sign Up </a>
+                    </center>
+                </div>
+
+                <div class="col s12">
+                        <br>
+                        <center>
+                            <a  onclick="gotoLoginSignUpScreen()"> Already Have an Account? </a>
+                        </center>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="firstFrame"> 
+
+            <div class="row" style="margin:0px;">
+                <div class="col s12 flex-div flex-direction-row  flex-justify-content-center ">
+                        <img src="img/logo_image.png" class="image_height">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 flex-div flex-direction-row  flex-justify-content-center ">
+                    <h3 class="headline"> TollFee </h3>  
+                </div>
+
+                <div class="col s12 flex-div flex-direction-row  flex-justify-content-center ">
+                        <h3 class="subHeadline"> Smarter Way to Pay Toll </h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12">
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s5 offset-s1 flex-div flex-direction-row  flex-justify-content-center ">
+                        <a onclick="gotoSignUpScreen()" class="waves-effect waves-light btn-large" style="background-color: #01E65F;border: 1px solid white;border-radius: 5px;  text-transform: none;color:white;font-size:3vh;"> Sign up </a>
+                </div>
+
+                <div class="col s5 flex-div flex-direction-row  flex-justify-content-center ">
+                        <a  onclick="gotoLoginScreen()" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color:#01E65F;font-size:3vh;"> Login </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="secondFrame">
+            <div class="row flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="margin:0px;">
+                    <div class="card-panel flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="background-color: #01E65F;margin:0px;">
+                        <div class="col s6">
+                                <img src="img/logo_image.png" class="image_height2">
+                        </div>
+                        <div class="col s6">
+                                <h3 class="headline"> TollFee </h3>  
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                <br> <br> <br>
+            </div>
+
+            <div class="row"  style="margin:0px;">
+                <div class="col s12">
+                    <div class="row">
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">mail</i>
+                                <input id="input_emailID_Login" type="text" class="validate">
+                                <label for="input_emailID_Login">Email ID</label>
+                            </div>
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">fingerprint</i>
+                                <input id="input_passwordLogin" type="password" class="validate">
+                                <label for="input_passwordLogin">Password</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <br>
+                        </div>
+                </div>
+
+                
+                <div class="col s12">
+                    <center>
+                        <a  onclick="doLogin()" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color:#01E65F;font-size:3vh;"> Login </a>
+                    </center>
+                </div>
+
+                <div class="col s12">
+                        <br>
+                        <center>
+                            <a  onclick="gotoSignUpScreenLogin()"> Don't have an account? </a>
+                        </center>
+                </div>
+            </div>
+           
+        </div>
+
+        <div id="alreadyPaidScreen">
+                <nav style="z-index:50;position: sticky;top:0;background-color:#01E65F;" class="nav-extended">
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo center" style="font-family: Robobold;font-weight: bold;"> Toll Fee</a>
+                        <a href="#!" class="brand-logo right"><i class="material-icons prefix">notifications</i></a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="badges.html">Components</a></li>
+                            <li><a href="collapsible.html">Javascript</a></li>
+                            <li><a href="mobile.html">Mobile</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <div class="flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="background-color:#01E65F;">
+                                <div style="height:103px;">
+                                </div>
+                                <div>
+                                    <img src="img/logo_image.png" class="image_height3">
+                                </div>
+                                <div>
+                                    <h4 class="headline2"> &nbsp; TollFee</h4>
+                                </div>
+                            </div>
+                                <br>
+                            <li><a><center> <h4> Made with Love  </h4> </center></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-content">
+                        <ul class="tabs tabs-transparent">
+                            <li class="tab"><a href="#test1">Travel Details</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="row" id="test1">
+                    <div class="col s12">
+                        <br>
+                    </div>
+                    <div class="col s12 m5" id="pushDataHere">
+                        <div class="row">
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">location_on</i>
+                                <input id="inputSource" type="text" class="validate">
+                                <label for="inputSource">Source</label>
+                            </div>
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">location_on</i>
+                                <input id="inputDestination" type="text" class="validate">
+                                <label for="inputDestination">Destination</label>
+                            </div>
+                            <div class="input-field col s10 offset-s1">
+                                <i class="material-icons prefix">account_balance_wallet</i>
+                                <input id="inputAmount" type="text" class="validate" disabled value="Rs ">
+                                <label for="inputAmount">Amount</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <center>
+                            <a  onclick="fetchAmountAndPayButton()" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color:#01E65F;font-size:3vh;"> Fetch Amount </a>
+                        </center>
+                    </div>
+                    <div class="col s12">
+                        <br>
+                    </div>
+                    <div class="col s12">
+                        <center>
+                            <a  onclick="payTollAmount()" id="payButton" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color:rgb(169, 172, 170);font-size:3vh;"> Pay Amount </a>
+                        </center>
+                    </div>
+                 </div>
+        </div>
+
+        <div id="paymentSuccess" style="display:none;">
+            <nav style="z-index:50;position: sticky;top:0;background-color:#01E65F;" class="nav-extended">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo center" style="font-family: Robobold;font-weight: bold;"> Toll Fee</a>
+                    <a href="#!" class="brand-logo right"><i class="material-icons prefix">notifications</i></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">Javascript</a></li>
+                        <li><a href="mobile.html">Mobile</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <div class="flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="background-color:#01E65F;">
+                            <div style="height:103px;">
+                            </div>
+                            <div>
+                                <img src="img/logo_image.png" class="image_height3">
+                            </div>
+                            <div>
+                                <h4 class="headline2"> &nbsp; TollFee</h4>
+                            </div>
+                        </div>
+                            <br>
+                        <li><a><center> <h4> Made with Love  </h4> </center></a></li>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a href="#test1">Travel Details</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row" id="test1">
+                <div class="col s12">
+                    <br>
+                </div>
+                <div class="col s12 m5" id="">
+                    <div class="row">
+                        <li><a><center> <h5 style="color:#01E65F;"> Payment Successful </h5> </center></a></li>
+                    </div>
+                    <div class="col s12">
+                        <br>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <center>
+                        <a  onclick="goBackToAddTravelData()" id="" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color: #01E65F;font-size:3vh;"> Go Back </a>
+                    </center>
+                </div>
+             </div>
+        </div>
+
+        <div id="payScreen">
+            <nav style="z-index:50;position: sticky;top:0;background-color:#01E65F;" class="nav-extended" >
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo center" style="font-family: Robobold;font-weight: bold;"> Toll Fee</a>
+                    <a href="#!" class="brand-logo right"><i class="material-icons prefix">notifications</i></a>
+                    <a href="#" data-activates="mobile-demo2" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">Javascript</a></li>
+                        <li><a href="mobile.html">Mobile</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <div class="flex-div flex-direction-row  flex-justify-content-center flex-align-items-center" style="background-color:#01E65F;">
+                            <div style="height:103px;">
+                            </div>
+                            <div>
+                                <img src="img/logo_image.png" class="image_height3">
+                            </div>
+                            <div>
+                                <h4 class="headline2"> &nbsp; TollFee</h4>
+                            </div>
+                        </div>
+                            <br>
+                        <li><a><center> <h4> Made with Love  </h4> </center></a></li>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a href="#test2">Pay Fees</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row" id="test2">
+                    <div class="col s12">
+                        <br>
+                    </div>
+                    <div class="col s12">
+                        <div class="card-panel cardStyle" style="padding-bottom:10px;" >
+                            <div class="row" style="margin:0px;">
+
+                                    <div class="col s12">
+                                    <center> Fees Details  </center>
+                                    </div>
+                                    <div class="col s12">
+                                        <hr>
+                                    </div>
+                                <div class="input-field col s12">
+                                        <table>
+                                                <thead>
+                                                  <tr>
+                                                      <th>Ledger Name</th>
+                                                      <th>Amount</th>
+                                                  </tr>
+                                                </thead>
+                                        
+                                                <tbody>
+                                                  <tr>
+                                                    <td>* Tution Fees</td>
+                                                    <td>127,000.00</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>* Development Fees</td>
+                                                    <td>17,195.00</td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <td>* Group Personal Policy</td>
+                                                    <td>120.00</td>
+                                                  </tr>
+    
+                                                  <tr>
+                                                    <td>Wi-Fi Fees</td>
+                                                    <td>1,300.00</td>
+                                                  </tr>
+
+
+                                                  <tr>
+                                                    <td>Hostel Fees</td>
+                                                    <td>35,000.00</td>
+                                                  </tr>
+
+                                                  <tr>
+                                                    <td>Messing Charges</td>
+                                                    <td>29,500.00</td>
+                                                   </tr>
+
+                                                  <tr>
+                                                    <td>Laundry Charges</td>
+                                                    <td>2,640.00</td>
+                                                  </tr>
+            
+                                                  <tr>
+                                                    <td>Barber Charges</td>
+                                                    <td>396.00</td>
+                                                  </tr>
+                                                </tbody>
+                                                
+                                              </table>
+                                </div>
+                                <div class="col s12">
+                                    <hr>
+                                </div>
+                                <div class="col s12">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12">
+                        <div class="card-panel cardStyle" style="padding-bottom:10px;" >
+
+                                <div class="row">
+                                    <div class="col s12">
+                                        <center> Choose Type  of Service  </center>
+                                    </div>
+                                    <div class="col s12">
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <div class="row flex-div flex-direction-row  flex-justify-content-center flex-align-items-center">
+                                    <div class="col s6">
+                                        *Hostel Required 
+                                    </div>
+                                    <div class="col s3">
+                                        <input onclick="calculateFees('yes')" class="with-gap" name="group1" type="radio" id="hostelYes" checked />
+                                        <label for="hostelYes">Yes</label>
+                                    </div>
+                                    <div class="col s3">
+                                        <input onclick="calculateFees('no')" class="with-gap" name="group1" type="radio" id="hostelNo" />
+                                        <label for="hostelNo">No</label>
+                                    </div>
+                                </div>
+
+                                <div class="flex-div flex-direction-row  flex-justify-content-center flex-align-items-center">
+                                    <div style="font-size:3vh;">
+                                        Total Amount -  &nbsp;
+                                    </div>
+                                    <div>
+                                        <h3 class="displayFees"> sdfsdf</h3>
+                                    </div>
+                                </div>
+
+                                <div> <br> </div>
+
+                                <div class="flex-div flex-direction-row  flex-justify-content-center flex-align-items-center">
+                                    <a  onclick="payFees()" class="waves-effect waves-light btn-large" style="background-color: white;border: 1px solid white;border-radius: 5px;  text-transform: none;color:#01E65F;font-size:3vh;"> Pay Fees </a>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                 </div>
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+</html>
